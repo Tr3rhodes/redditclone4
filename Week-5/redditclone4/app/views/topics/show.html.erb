@@ -14,7 +14,9 @@
   <strong>Url:</strong>
   <%= @topic.url %>
 </p>
-<%= render :partial => 'comments/new', @topic => @topic_id %>
+<!-- Comments -->
+<%= render :partial => 'comments/comment', :collection => @topic.comments %>
+
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
